@@ -1,19 +1,19 @@
 #!/bin/sh
 # Free RDP GoormIDE
-sudo adduser aank --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
-echo "aank:LinggaHosting" | sudo chpasswd
-sudo usermod -aG sudo,adm aank
+sudo adduser demo --gecos "Demo User,53045009,6416110,352577674" --disabled-password
+echo "demo:demopassword" | sudo chpasswd
+sudo usermod -aG sudo,adm demo
 sudo apt install screen
 sudo apt update
 clear
-screen -R a2nk
+screen -R demo
 echo "===================================="
-echo "Install XFCE"
-echo "Choose Keyboard 31 then 1"
+echo "Instalando XFCE"
+echo "Escolha o teclado 75 depois 1"
 echo "===================================="
 sudo apt install -y xfce4 xfce4-goodies > /dev/null 2>&1
 echo "=======25%"
-sudo apt install firefox -y > /dev/null 2>&1
+sudo apt install neofetch -y > /dev/null 2>&1
 echo "=============50%"
 sudo apt-get install -y xrdp > /dev/null 2>&1
 sudo apt-get install -y xfce4-terminal > /dev/null 2>&1
@@ -25,8 +25,8 @@ clear
 echo "=======================100%"
 echo "===================================="
 echo "RDP IP Address :" && curl --silent --show-error ipconfig.io
-echo "Username : aank"
-echo "Password : LinggaHosting"
+echo "Username : demo"
+echo "Password : demopassword"
 echo Go to settings add port 3389
 echo "===================================="
 b='\033[1m'
